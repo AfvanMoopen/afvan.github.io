@@ -1,0 +1,41 @@
+.sneakpeek
+	+section
+	// display:flex
+	// justify-content: space-around
+	margin-top: 600px
+	pointer-events: none
+
+	&__frame
+		position: sticky
+		margin-left: getGrid(4)
+		width: getGrid(6)
+		height: 0
+		top: 50%
+		transform: translate(0,-50%)
+		padding-bottom: 50%
+		background: #fff
+		z-index: -1
+		+p
+			margin-left: getGrid(6)
+			bottom: 0
+			transform: none
+		+m
+			display: none
+
+	&__gallery
+		margin-left: getGrid(4)
+		padding: 24px
+		width: getGrid(6)
+		margin-bottom: 200px
+		img
+			width: 100%
+		+p
+			margin-left: getGrid(6)
+		+m
+			margin-left: 0
+			padding: 16px
+			width: getGrid(12)
+			margin-bottom: 96px
+		& img
+			+m
+				border: 16px solid #fff

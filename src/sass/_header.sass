@@ -1,0 +1,73 @@
+.header
+	position: sticky
+	left: 0px  
+
+	top: 50%
+	transform: translate(0,-50%)
+
+	align-items: baseline
+
+	// Desktop
+	
+	display: flex
+	flex-direction: row
+	margin: 0 24px  
+	z-index: 1 
+	
+	+m
+		// display: none !important
+		// background: red 
+		display: block
+
+	&__pinned
+		border-bottom: 1px solid #d8d8d8
+
+
+	&__logo
+		+grid(2)
+		align-self: center
+		+m
+			float: left
+			width: auto
+			height: auto
+		svg
+			fill: #ff5500
+			transition: all .2s linear
+			max-width: 84px
+			min-width: 32px
+			width: auto
+	&__text
+		+grid(10)
+		+p
+			+grid(6)
+		+m
+			+grid(10)
+			padding-left: getGrid(2)
+			line-height: 1.5
+		&__welcome
+			font-family: daxbold, Helvetica, sans-serif
+		&__email
+			color: $text
+
+
+	&__cv
+		margin-left: auto 
+		width: getGrid(2)
+		+p
+			+grid(4)
+		+m
+			width: getGrid(10)
+			padding-top: 8px
+			margin-left: getGrid(2)
+		a
+			display: inline-block
+			position: relative
+			overflow: visible
+			&:before
+				content: ''
+				position: absolute
+				top: -16px
+				left: -16px
+				bottom: -16px
+				right: -16px
+				z-index: -100

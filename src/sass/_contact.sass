@@ -1,0 +1,76 @@
+.contact
+	+section
+	background: $bg 
+	position: relative
+	border-bottom: 1px solid #d8d8d8
+	&__header
+		@include css-lock(40, 72, 320, 1200, font-size, px);
+		line-height: 1.22
+		font-weight: normal
+		margin-bottom: 100px 
+		strong
+			font-weight: normal
+			color: #f50 
+		+m
+			margin-bottom: 32px
+		+p
+			margin-bottom: 32px
+	&__text
+		display: flex
+		flex-direction: row
+		line-height: 1.5 
+		margin-bottom: 96px 
+		+m
+			display: block
+			margin-bottom: 32px
+		p
+			+grid(4)
+			+m
+				width: auto
+				margin-bottom: 1.5em 
+				padding-right: 0
+			span
+				display: block
+				height: 3em 
+				position: relative
+				&:before
+					position: absolute
+					content: "" 
+					width: 100%
+					height: 1px
+					background: #f60 
+					left: 0
+					top: 1em
+.socials
+	display: flex
+	+m
+		display: block
+	&__stuff
+		@include css-lock(24, 32, 320, 1200, font-size, px);
+		font-weight: normal
+		margin-bottom: 32px 
+		+grid(7)
+		margin-right: getGrid(1) 
+		+m
+			margin-right: 0
+			+grid(12)
+	&__getme
+		width: getGrid(4)
+		+m
+			width: getGrid(12)
+			padding-right: 0
+	ul
+		@include css-lock(24, 32, 320, 1200, font-size, px);
+		line-height: 2 
+.copy
+	background: #fff 
+	padding: 16px 
+	@include css-lock(24, 32, 320, 1200, font-size, px);
+	position: relative
+	margin-bottom: 16px 
+/*	&__button
+		position: absolute
+		right: 16px 
+		top: 50%
+		transform: translate(0,-50%) 
+		font-size: 24px */

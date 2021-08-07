@@ -1,0 +1,30 @@
+.hello
+	+section
+	margin-bottom: 0  
+	line-height: 1.22
+	@include css-lock(32, 72, 600, 1200, font-size, px)
+	top: 10vh
+	+rh(600)
+		top: 65vh
+	//background: $bg
+	z-index: -1
+	position: sticky
+	perspective: 1000
+	
+	&__arrow
+		position: relative
+		top: -1.2em 
+		padding-left: 15px
+		+m
+			top: 1em
+			padding-left: 0
+
+
+	&__text
+		padding-left: getGrid(2)
+		margin-left: -32px
+		+m
+			padding-left: 0
+			margin: 0
+		+p
+			margin: 0

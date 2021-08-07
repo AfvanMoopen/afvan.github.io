@@ -1,0 +1,48 @@
+// done by riverco.de
+@import helpers/index
+@import generated/sprite-svg
+@import generated/index
+@import base/index
+@import lib/index
+@import common
+@import header
+@import hello
+@import skills
+@import clients
+@import industries
+@import contact
+@import footer
+@import sneakpeek
+// @import components/index
+// @import containers/index
+// @import pages/index
+
+
+.distort 
+	position: absolute
+	pointer-events: none
+	will-change: transform
+	z-index: 10 
+	&__img 
+		opacity: 0
+.cursor__inner
+	z-index: 9999
+	pointer-events: none
+	position: absolute
+	top: -400px
+	left: 800px
+	border-radius: 0 50% 50% 50%
+	+m
+		display: none
+	+p
+		display: none
+
+.cursor__inner--dot 
+	width: 16px
+	height: 16px
+	background: $highlight
+
+.cursor__inner--circle 
+	width: 24px
+	height: 24px
+	background: #fff

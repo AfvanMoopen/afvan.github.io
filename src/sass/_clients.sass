@@ -1,0 +1,91 @@
+.clients
+	+section
+	// margin-top: 0
+	background: none !important
+	// overflow: hidden
+	margin-bottom: 0
+	+m
+		margin-bottom: 0
+	&__header
+		font-weight: normal
+		line-height: 1.22
+		@include css-lock(40, 68, 320, 1200, font-size, px);
+		margin-left: getGrid(1)
+		// margin-top: 40vh
+		padding-right: getGrid(1) 
+		padding-bottom: 100px
+		background: $bg
+		position: relative
+		+m
+			margin: 0
+		+p
+			margin: 0
+		&__topline
+			position: relative
+			z-index: 10
+		&__duration
+			display: inline-block
+			padding: 16px
+			margin: -16px 0
+			width: getGrid(6.5)
+			position: absolute
+			background: #fff
+			color: $text
+			z-index: 9
+			+m
+				display: block
+				width: getGrid(12)
+				margin-left: -16px
+						
+	&__title
+		@include css-lock(24, 48, 320, 1200, font-size, px);
+		font-weight: normal
+		padding-bottom: 32px
+		background: $bg
+		position: relative
+	&__list
+		background: $bg
+		// column-count: 4
+		// column-gap: 16px
+		display: flex
+		flex-wrap: wrap
+		flex-direction: row
+		font-size: 18px 
+		line-height: 1.5 
+		padding-bottom: 32px 
+		position:relative
+		&:after
+			bottom: -56px
+		li
+			+grid(3)
+			+m
+				+grid(6)
+	&__more
+		background: $bg
+		color: $highlight !important
+		font-size: 18px 
+		float: right
+		+grid(3)
+		padding: 0 
+		position: relative
+		+m
+			float: none
+			width: auto
+
+
+
+@keyframes text-changer
+	0%
+		content: '20 years.'
+	17%
+		content: '7 300 days.'
+	34%
+		content: '438 000 hours.'
+	51%
+		content: '26•10⁶ mins.'
+	68%
+		content: '6.307e+8 sec.'
+	85%
+		content: 'fun.'
+	100%
+		content: 'ages!'
